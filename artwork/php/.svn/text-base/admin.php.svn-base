@@ -1,0 +1,136 @@
+<?php
+if(isset($_SESSION['logged']) && $_SESSION['logged'] == true) {
+	$u = new gTemp('htm/admin.htm');
+
+	$u->whitelist('action', 'alpha', 'hash', 'alnum');
+
+	$orig_action = "";
+	if(isset($_FILES['datafile']) && $_FILES['datafile']['error'] == 0 && $u->get('action') == 'upit') {
+		$orig_action = 'upit';
+		$size = getimagesize($_FILES['datafile']['tmp_name']);
+		if(is_array($size) && ($size[0] != 1024 || $size[1] != 1024)) {
+			$filename = md5_file($_FILES['datafile']['tmp_name']);
+			if(!file_exists("img/$filename.jpg")) {
+				if(move_uploaded_file($_FILES['datafile']['tmp_name'], "img/$filename.jpg")) {
+					copy("img/$filename.jpg", "img/$filename-2.jpg");
+					copy("img/$filename.jpg", "img/$filename-3.jpg");
+					if($size[0] >= $size[1]) {
+						$geo = "640x" . round(640*$size[1]/$size[0]);
+					} else {
+						$geo = round(640*$size[1]/$size[0]) . "x640";
+					}
+					shell_exec('mogrify -resize ' . $geo . " img/$filename-2.jpg");
+					$filename2 = md5_file("img/$filename-2.jpg");
+					shell_exec("mv img/$filename-2.jpg img/$filename2.jpg");
+					if($size[0] >= $size[1]) {
+						$geo = "200x" . round(200*$size[1]/$size[0]);
+					} else {
+						$geo = round(200*$size[1]/$size[0]) . "x200";
+					}
+					shell_exec('mogrify -resize ' . $geo . " img/$filename-3.jpg");
+					$filename3 = md5_file("img/$filename-3.jpg");
+					shell_exec("mv img/$filename-3.jpg img/$filename3.jpg");
+
+					$exif = @exif_read_data('img/' . $filename . '.jpg');
+					
+					$u->set(array('file' => true, 'hash1' => $filename, 'hash2' => $filename2, 'hash3' => $filename3, 'date' => strftime("%F %T", time()), 'filename' => substr($_FILES['datafile']['name'], 0, strlen($_FILES['datafile']['name'])-4), 'action' => 'postit'));
+				} else {
+					$u->set(array('error' => 'Error moving file!'));
+				}
+			} else {
+				$u->set(array('error' => 'File already exists!'));
+			}
+		} else {
+			$u->set(array('error' => 'File size must be 1024px on the long edge!'));
+		}
+	}
+
+	if($u->get('action') == 'postit' && $orig_action == "") {
+		$orig_action = 'postit';
+		$u->whitelist('filename', 'print', 'hash1', 'alnum', 'hash2', 'alnum', 'hash3', 'alnum', 'date', 'print', 'cancel', 'alpha', 'dimensions', 'print', 'optional', 'print');
+			if($u->get('hash1') && $u->get('hash2') && $u->get('hash3')) {
+				if($u->get('cancel') == "Cancel") {
+					shell_exec("rm img/" . $u->get('hash1') . ".jpg");
+					shell_exec("rm img/" . $u->get('hash2') . ".jpg");
+					shell_exec("rm img/" . $u->get('hash3') . ".jpg");
+					$u->set(array('error' => 'Uploaded image deleted!'));
+				} else {
+					$query = "SELECT ord as ordnum FROM common WHERE 1 ORDER BY ord DESC LIMIT 1";
+					$result = mysql_query($query);
+					$ordnum = mysql_result($result, 0, "ordnum")+1;
+					mysql_query("START TRANSACTION");
+					$worked = false;
+					$query = "INSERT INTO images (hashID, parent, type) VALUES ('" . $u->get('hash1') . "', NULL, 1), ('" . $u->get('hash2') . "', '" . $u->get('hash1') . "', 2), ('" . $u->get('hash3') . "', '" . $u->get('hash1') . "', 3)";
+					$result = mysql_query($query);
+					if(mysql_affected_rows() == 3) {
+						$query = "INSERT INTO common (parent, name, date, dimensions, optional, ord) VALUES ('" . $u->get('hash1') . "', '" . $u->get('filename') . "', '" . ($u->get('date')?$u->get('date'):strftime("%F %T")) . "', '" . $u->get('dimensions') . "', '" . $u->get('optional') . "', '" . $ordnum . "')";
+						$result = mysql_query($query);
+						if(mysql_error()) {
+							$u->set(array('error' => 'Error posting to database.'));
+							mysql_query("ROLLBACK");
+						} else {
+							$u->set(array('error' => $u->get('filename') . ' posted.'));
+							mysql_query("COMMIT");
+							$worked = true;
+						}
+					} else {
+						$u->set(array('error' => 'Error posting to database.'));
+						mysql_query("ROLLBACK");
+					}
+				}
+				if($worked == false) {
+					shell_exec("rm img/" . $u->get('hash1') . ".jpg");
+					shell_exec("rm img/" . $u->get('hash2') . ".jpg");
+					shell_exec("rm img/" . $u->get('hash3') . ".jpg");
+				}
+			} else {
+				$u->set(array('error' => 'Improper hash values!'));
+			}
+	}
+
+	if($u->get('action') == 'delete' && $orig_action == "" && $u->get('hash') != "") {
+		$orig_action = "delete";
+		$u = new gTemp('htm/delete.htm');
+		$u->whitelist('hash', 'alnum');
+		$query = "SELECT c.name, i.hashID FROM common as c LEFT JOIN images as i ON (c.parent=i.parent AND i.type=3) WHERE c.parent='" . $u->get('hash') . "'";
+		$gotten = mysql_fetch_array(mysql_query($query));
+		$u->set($gotten);
+		$t->set(array('main' => ($t->get('main') . $u->evaluate()), 'admin' => true));
+	}
+	
+	if($u->get('action') == 'confdel' && $orig_action == "" && $u->get('hash') != "") {
+		$orig_action="confdel";
+		$u->whitelist('buttons', 'alpha');
+		if($u->get('buttons') == "Confirm"){
+			$query = "SELECT i.hashID, j.hashID as parent FROM images as i LEFT JOIN images as j ON (i.parent=j.hashID) WHERE j.hashID='" . $u->get('hash') . "'";
+			$result = mysql_query($query);
+			$gotten = mysql_fetch_array($result);
+			$hash1 = $gotten['parent'];
+			$hash2 = $gotten['hashID'];
+			$gotten = mysql_fetch_array($result);
+			$hash3 = $gotten['hashID'];
+			mysql_query("START TRANSACTION");
+			$query = "DELETE i, c FROM images as i LEFT JOIN common as c ON (i.hashID=c.parent) WHERE i.parent='" . $u->get('hash') . "' OR i.hashID='" . $u->get('hash') . "' OR c.parent='" . $u->get('hash') . "'";
+			mysql_query($query);
+			if(!mysql_error()){
+				shell_exec("rm img/$hash1.jpg");
+				shell_exec("rm img/$hash2.jpg");
+				shell_exec("rm img/$hash3.jpg");
+				mysql_query("COMMIT");
+				$t->set(array('d' => 'main'));
+			} else {
+				mysql_query("ROLLBACK");
+				$t->set(array('error' => 'Error in deletion.'));
+				$t->set(array('d' => 'image'));
+			}
+		} else {
+			$t->set(array('d' => 'image'));
+		}
+	}
+
+	if($orig_action != "confdel" && $orig_action != "delete")
+		$t->set(array('main' => ($t->get('main') . $u->evaluate()), 'admin' => true));
+} else {
+	$t->set(array('d' => 'main'));
+}
+?>

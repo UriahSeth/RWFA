@@ -1,0 +1,259 @@
+/*
+ * jQuery Nivo Slider v2.1
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2010, Gilbert Pellegrom
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * March 2010
+ */
+ 
+ 
+/* The Nivo Slider styles */
+.nivoSlider {
+	position:relative;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:60;
+	display:none;
+}
+/* The slices in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:50;
+	height:100%;
+}
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	opacity:0.8; /* Overridden by captionOpacity setting */
+	width:100%;
+	z-index:89;
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:99;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a {
+	position:relative;
+	z-index:99;
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+
+
+
+
+
+
+
+
+/* Some extra work for slider css */
+
+
+/*============================*/
+/*=== Custom Slider Styles ===*/
+/*============================*/
+.nivoSlider {
+	position:relative;
+    width:970px;
+    height:500px;
+	background:#efe9d1 url(images/loading.gif) no-repeat 50% 50%;
+    margin-bottom:80px;
+    -moz-box-shadow:0px 0px 5px #333;
+	-webkit-box-shadow:0px 0px 5px #333;
+	box-shadow:0px 0px 5px #333;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(../images/arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+a.nivo-prevNav {
+	left:15px;
+}
+
+.nivo-caption {
+    text-shadow:none;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.nivo-caption a { 
+    color:#efe9d1;
+    text-decoration:underline;
+}
+
+#slider1 .nivo-controlNav,
+#slider2 .nivo-controlNav,
+#slider4 .nivo-controlNav {
+	position:absolute;
+	left:260px;
+	bottom:-42px;
+}
+#slider1 .nivo-controlNav a,
+#slider2 .nivo-controlNav a,
+#slider4 .nivo-controlNav a {
+	display:block;
+	width:22px;
+	height:22px;
+	background:url(../images/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+}
+#slider1 .nivo-controlNav a.active,
+#slider2 .nivo-controlNav a.active,
+#slider4 .nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+#slider2 a {
+	display:block; /* IE Fix */
+}
+
+#slider3 {
+	margin-bottom:110px;
+}
+#slider3 .nivo-controlNav {
+	position:absolute;
+	left:185px;
+	bottom:-70px;
+}
+#slider3 .nivo-controlNav a {
+    display:inline;
+}
+#slider3 .nivo-controlNav img {
+	display:inline;
+	position:relative;
+	margin-right:10px;
+	-moz-box-shadow:0px 0px 5px #333;
+	-webkit-box-shadow:0px 0px 5px #333;
+	box-shadow:0px 0px 5px #333;
+}
+#slider3 .nivo-controlNav a.active img {
+    border:1px solid #000;
+}
+
+#slider 4 {
+    margin-bottom:0;
+}
+
+/*====================*/
+/*=== Input Styles ===*/
+/*====================*/
+input,
+textarea,
+select {
+	padding: 2px;
+	font: 400 1em Verdana, Sans-serif;
+	color: #666;
+	background:#ffffff;
+	border: 1px solid #999;
+	margin:2px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	color: #000;
+	background: #fff;
+	border: 1px solid #002F59;
+}
+
+input#paypal-btn {
+	border:0;
+	background:transparent;
+	position:relative;
+	margin:0 0 1em 0;
+	padding:0;
+}
+input#paypal-btn:focus {
+	outline:0;
+}
+input#paypal-btn:active {
+	top:2px;
+}
+
+/*====================*/
+/*=== Other Styles ===*/
+/*====================*/
+.clear {
+	clear:both;
+}
+
+.pointer {
+	cursor:pointer;
+}
+
+/* Sharper Thumbnails */
+img {
+	-ms-interpolation-mode:bicubic;
+}
+
+/* Wordpress Defaults */
+img.alignright {float:right; margin:0 0 .7em 1em}
+img.alignleft {float:left; margin:0 1em .7em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 .7em 1em}
+a img.alignleft {float:left; margin:0 1em .7em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}

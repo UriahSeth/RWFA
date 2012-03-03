@@ -1,0 +1,20 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(function() {          
+    $("img").lazyload({
+        placeholder : "images/roger.jpg", 
+        event : "sporty"
+    });
+});
+$(window).bind("load", function() { 
+    var timeout = setTimeout(function() {$("img").trigger("sporty")}, 5000);
+}); 
+</script>
+</head>
+<body>
+
+</body>
+</html>
+

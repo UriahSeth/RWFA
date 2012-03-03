@@ -1,0 +1,27 @@
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^bio.htm$ http://www.rogerwilliamsart.com/meet/biography/ [R=301,L]
+RewriteRule ^book.htm$ http://www.rogerwilliamsart.com/meet/events/ [R=301,L]
+RewriteRule ^contact.htm$ http://www.rogerwilliamsart.com/meet/contactus/ [R=301,L]
+RewriteRule ^events.htm$ http://www.rogerwilliamsart.com/meet/events/ [R=301,L]
+RewriteRule ^galleries.htm$ http://www.rogerwilliamsart.com/galleries/galleries/ [R=301,L]
+RewriteRule ^thankyou.htm$ http://www.rogerwilliamsart.com/meet/contactus/ [R=301,L]
+RewriteRule ^thankyouconfirmed.htm$ http://www.rogerwilliamsart.com/meet/contactus/ [R=301,L]
+RewriteRule ^events/events.htm$ http://www.rogerwilliamsart.com/meet/events/ [R=301,L]
+RewriteRule ^events/show2010.htm$ http://www.rogerwilliamsart.com/meet/events/ [R=301,L]
+RewriteRule ^artwork/$ http://www.rogerwilliamsart.com/artwork/past-work/ [R=301,L]
+
+RewriteRule ^artwork/giclee-information/([0-9]+)[\/]{0,1}$ index.php?g_id=$1
+
+
+RewriteRule ^meet/events/([0-9]+)[\/]{0,1}$ index.php?event_id=$1
+RewriteRule ^artwork/past-work/([0-9]+)[\/]{0,1}$ index.php?page=$1
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

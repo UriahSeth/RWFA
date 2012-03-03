@@ -1,0 +1,61 @@
+<form action="{self}" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="d" value="admin"/>
+	<br/>
+	<br/>
+	<!-- IF !file -->
+		File to Upload: <input type="file" name="datafile" size="40" />
+		<input type="hidden" name="action" value="upit"/>
+	<!-- ELSE -->
+		<div id="uploaded_img">
+			<img class="medium" src="img/{hash2}.jpg" alt="Uploaded" />
+		</div>
+		<table>
+			<tr>
+				<td align="right">Uploaded:</td><td><input type="text" name="date" size="40" value="{date}"/></td>
+			</tr>
+			<tr>
+				<td align="right">Title:</td><td><input type="text" name="filename" size="40" value="{filename}"/></td>
+			</tr>
+			<tr>
+				<td align="right">Dimensions:</td><td><input type="text" name="dimensions" size="40" value="{dimensions}"/></td>
+			</tr>
+			<tr>
+				<td align="right">Optional Qualifying Information:</td><td><input type="text" name="optional" size="40" value="{optional}"/></td>
+			</tr>
+			<tr>
+				<td align="right">Sold:</td><td><input type="checkbox" name="sold" value="{sold}" {checked}/></td>
+			</tr>
+		</table>
+		<input type="hidden" name="hash1" value="{hash1}"/>
+		<input type="hidden" name="hash2" value="{hash2}"/>
+		<input type="hidden" name="hash3" value="{hash3}"/>
+		<input type="hidden" name="date" value="{date}"/>
+		<input type="hidden" name="action" value="{action}"/>
+		<input type="submit" name="cancel" value="Cancel">
+	<!-- ENDIF -->
+	<br/>
+	<input type="submit" value="Submit">
+</form>
+<!-- IF !file -->
+	<form action="{self}" method="post">
+		<table>
+			<tr><td>Add User:</td><td></td></tr>
+			<tr><td>Username:</td><td><input type="text" name="username" size="20" value="{username}"/></td></tr>
+			<tr><td>Password:</td><td><input type="text" name="password" size="20"/></td></tr>
+			<tr><td>Confirm:</td><td><input type="text" name="confirm" size="20"/></td></tr>
+		</table>
+		<input type="hidden" name="d" value="admin"/>
+		<input type="hidden" name="action" value="useradd"/>
+		<input type="submit" value="Submit">
+	</form>
+	<br/>
+	<br/>
+	<b>Warning: Clicking a user below will delete that user. (NO CONFIRMATION)</b><br/>
+	<!-- DO users -->
+		<!-- IF !loggedin -->
+			<a href="?d=admin&action=userdel&username={name}">{name}</a><br/>
+		<!-- ELSE -->
+			{name}<br/>
+		<!-- ENDIF -->
+	<!-- LOOP -->	
+<!-- ENDIF -->

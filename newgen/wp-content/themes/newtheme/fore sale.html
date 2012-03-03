@@ -1,0 +1,191 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/inside_style2.css" type="text/css" />  
+ <link rel="stylesheet" type="text/css" href="jquery.ad-gallery.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.ad-gallery.js"></script> 
+<script src="js-1.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+  $(function() {
+    $('img.image1').data('ad-desc', 'Whoa! This description is set through elm.data("ad-desc") instead of using the longdesc attribute.<br>And it contains <strong>H</strong>ow <strong>T</strong>o <strong>M</strong>eet <strong>L</strong>adies... <em>What?</em> That aint what HTML stands for? Man...');
+    $('img.image1').data('ad-title', 'Title through $.data');
+    $('img.image4').data('ad-desc', 'This image is wider than the wrapper, so it has been scaled down');
+    $('img.image5').data('ad-desc', 'This image is higher than the wrapper, so it has been scaled down');
+    var galleries = $('.ad-gallery').adGallery();
+    $('#switch-effect').change(
+      function() {
+        galleries[0].settings.effect = $(this).val();
+        return false;
+      }
+    );
+    $('#toggle-slideshow').click(
+      function() {
+        galleries[0].slideshow.toggle();
+        return false;
+      }
+    );
+    $('#toggle-description').click(
+      function() {
+        if(!galleries[0].settings.description_wrapper) {
+          galleries[0].settings.description_wrapper = $('#descriptions');
+        } else {
+          galleries[0].settings.description_wrapper = false;
+        }
+        return false;
+      }
+    );
+  }); 
+ 
+ function show_prompt()
+{
+var name=prompt("Please enter your email address");
+if (name!=null && name!="")
+  {
+  document.write(" ");
+  }
+}
+  </script>
+
+
+</head>
+
+
+<body >
+
+<div id="main" >
+
+  <div id="main_content">
+	   	   <div id="logo_text">
+         <a href="index.htm"><span class="header_letter">R</span>OGER <span class="header_letter">W</span>ILLIAMS </a>
+       </div>
+	   
+	  <div>
+	     <ul id="nav">
+	<li ><a href="inside_page.htm">MEET</a>
+	  <ul>
+	  <li><a href="inside_page.htm">Blog</a></li>
+	  <li><a href="inside_biography.htm">Biography</a></li>
+	  <li><a href="inside_events.htm">Events</a></li>
+	  <li><a href="inside_contact.htm">Contact</a></li>
+	 </ul>
+	</li>
+	<li><a href="artwork.html">ARTWORK</a>
+
+	  <ul>
+			<li ><a href="#">For Sale</a></li>
+			<li><a href="#">Past Work</a></li>
+			</ul>
+	</li>
+	<li><a href="study_intro.html">STUDY</a>
+		<ul>
+	     <li><a href="study_intro.html">Introduction</a></li>
+	     <li><a href="study_inder_light.html">Understanding Light</a></li>
+	     <li><a href="study_studio_workshop.html">Studio Workshop</a></li>
+	     <li><a href="study_plein_air_workshop.html">Plien Air Workshop</a></li>
+		 <li><a href="study_retreat_&_excursion.html">Retreat & Excursions</a></li>
+	     <li><a href="study_testimonials.html">Testimonials</a></li>
+	     <li ><a href="#">Contact Roger</a></li>
+	 </ul>
+	</li>	
+	<li><a href="gall_gall.html">GALLERIES</a>
+	  <ul>
+	  <li><a href="gall_studio.html">Roger's Studio</a></li>
+	  <li><a href="gall_gall.html">Galleries</a></li>
+	  <li ><a href="online_comm.html">Online Communities</a></li>
+	 </ul>
+	</li>
+	<li><a href="#">SEARCH</a></li>
+</ul>
+   </div>
+  	  <div id="clear"></div> 
+	 </div>
+
+
+<div id="large_image" >
+
+<div>
+ <div id="container" align="center">
+       <div id="gallery" class="ad-gallery" align="center">
+      <div class="ad-image-wrapper">      </div>
+      <div class="ad-controls">
+      </div>
+      <div class="ad-nav">
+        <div class="ad-thumbs">
+          <ul class="ad-thumb-list">
+            <li>
+              <a href="images/1.jpg">
+                <img src="images/thumbs/t1.jpg" class="image0">              </a>            </li>
+            <li>
+              <a href="images/10.jpg">
+                <img src="images/thumbs/t10.jpg" title="A title for 10.jpg" alt="This is a nice, and incredibly descriptive, description of the image 10.jpg" class="image1">              </a>            </li>
+            <li>
+              <a href="images/11.jpg">
+                <img src="images/thumbs/t11.jpg" title="A title for 11.jpg" longdesc="http://coffeescripter.com" alt="This is a nice, and incredibly descriptive, description of the image 11.jpg" class="image2">              </a>            </li>
+            <li>
+              <a href="images/12.jpg">
+                <img src="images/thumbs/t12.jpg" title="A title for 12.jpg" alt="This is a nice, and incredibly descriptive, description of the image 12.jpg" class="image3">              </a>            </li>
+            <li>
+              <a href="images/13.jpg">
+                <img src="images/thumbs/t13.jpg" title="A title for 13.jpg" alt="This is a nice, and incredibly descriptive, description of the image 13.jpg" class="image4">              </a>            </li>
+                       <li>
+              <a href="images/4.jpg">
+                <img src="images/thumbs/t4.jpg" title="A title for 4.jpg" alt="This is a nice, and incredibly descriptive, description of the image 4.jpg" class="image8">              </a>            </li>
+            <li>
+              <a href="images/5.jpg">
+                <img src="images/thumbs/t5.jpg" title="A title for 5.jpg" alt="This is a nice, and incredibly descriptive, description of the image 5.jpg" class="image9">              </a>            </li>
+           
+            <li>
+              <a href="images/9.jpg">
+                <img src="images/thumbs/t9.jpg" title="A title for 9.jpg" alt="This is a nice, and incredibly descriptive, description of the image 9.jpg" class="image13">              </a>            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ </div>
+</div>
+</div>
+
+<div style="width:640px; height:20px; margin:0 auto;">
+
+<div style="width:320px; height:20px; float:left">24X36</div>
+<div id="imint" style="width:100px; height:20px; float: right"><a href="#" onClick="show_prompt()" >I am Interested</a></div>
+
+</div>
+
+<div style="width:640px; height:30px; margin:0 auto;">
+<div style="width:200px; height:30px; float:left;  "></div>
+<div style="width:200px; height:30px; float:left;  "></div>
+<div style="width:61px; height:30px; float:right;"   ><img src="images/shareblack.jpg" width="61" height="21"></div>
+<div style="width:43px; height:30px; float:right;"   ><img src="images/faceblack.jpg" width="43" height="21"><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=122613147822490&amp;xfbml=1"></script><fb:like href="http://www.2sigmas.com" send="true" width="450" show_faces="true" font="verdana"></fb:like></div>
+
+
+
+</div>
+
+</div>
+
+
+<div id="footer" >
+
+<div id="footer-1" >
+	   	 
+         <div class="footer_logo_text"><span class="footer_letter">R</span>OGER <span class="footer_letter">W</span>ILLIAMS
+         <span class="footer_letter">F</span>INE <span class="footer_letter">A</span>RT 
+       </div>
+	    
+        <div class="footer_text" >Copyright 2011</div>
+        
+        </div>
+        
+      
+                       
+        </div>
+
+
+
+</div>
+</body>
+
+</html>
+

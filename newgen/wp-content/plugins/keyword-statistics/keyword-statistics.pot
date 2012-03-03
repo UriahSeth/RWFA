@@ -1,0 +1,885 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-12-10 18:30+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: keyword-statistics.php:208 keyword-statistics.php:210
+#: keyword-statistics.php:212
+msgid "Archive of"
+msgstr ""
+
+#: keyword-statistics.php:225 keyword-statistics.php:227
+#: keyword-statistics.php:429
+msgid "&ndash; page"
+msgstr ""
+
+#: keyword-statistics.php:490 keyword-statistics.php:1071
+#: keyword-statistics.php:1162 keyword-statistics.php:1439
+#: keyword-statistics.php:1524 keyword-statistics.php:1605
+#: keyword-statistics.php:1697 keyword-statistics.php:1838
+msgid "Nonce verification failed:"
+msgstr ""
+
+#: keyword-statistics.php:490
+msgid "Error while updating the meta informations for the post!"
+msgstr ""
+
+#: keyword-statistics.php:845
+msgid "Language"
+msgstr ""
+
+#: keyword-statistics.php:882 keyword-statistics.php:1783
+msgid "Filter stopwords"
+msgstr ""
+
+#: keyword-statistics.php:886
+msgid "Show first"
+msgstr ""
+
+#: keyword-statistics.php:891 keyword-statistics.php:1144
+#: keyword-statistics.php:1276 keyword-statistics.php:1513
+#: keyword-statistics.php:1594 keyword-statistics.php:1686
+#: keyword-statistics.php:1827 keyword-statistics.php:1945
+msgid "Update"
+msgstr ""
+
+#: keyword-statistics.php:898 keyword-statistics.php:1231
+msgid "Title"
+msgstr ""
+
+#: keyword-statistics.php:910 keyword-statistics.php:1238
+msgid "Keywords"
+msgstr ""
+
+#: keyword-statistics.php:919
+msgid "use generated keywords"
+msgstr ""
+
+#: keyword-statistics.php:924 keyword-statistics.php:1252
+#: keyword-statistics.php:1568 keyword-statistics.php:1577
+#: keyword-statistics.php:1587
+msgid "Robots"
+msgstr ""
+
+#: keyword-statistics.php:938 keyword-statistics.php:1245
+#: keyword-statistics.php:1292
+msgid "Description"
+msgstr ""
+
+#: keyword-statistics.php:947
+msgid "use generated description"
+msgstr ""
+
+#: keyword-statistics.php:962 keyword-statistics.php:986
+#: keyword-statistics.php:1399 keyword-statistics.php:1407
+#: keyword-statistics.php:1411
+msgid "characters used"
+msgstr ""
+
+#: keyword-statistics.php:966 keyword-statistics.php:981
+#: keyword-statistics.php:990 keyword-statistics.php:1234
+#: keyword-statistics.php:1241 keyword-statistics.php:1248
+msgid "Preview"
+msgstr ""
+
+#: keyword-statistics.php:972
+msgid "characters"
+msgstr ""
+
+#: keyword-statistics.php:977
+msgid "keywords / phrases used"
+msgstr ""
+
+#: keyword-statistics.php:1021 keyword-statistics.php:1030
+#: keyword-statistics.php:1031 keyword-statistics.php:1043
+msgid "Keyword Statistics"
+msgstr ""
+
+#: keyword-statistics.php:1045 keyword-statistics.php:1122
+#: keyword-statistics.php:1227
+msgid "Sitewide Meta"
+msgstr ""
+
+#: keyword-statistics.php:1047 keyword-statistics.php:1127
+#: keyword-statistics.php:1222 keyword-statistics.php:1565
+msgid "Aggregations Meta"
+msgstr ""
+
+#: keyword-statistics.php:1049 keyword-statistics.php:1644
+msgid "Metadata Delivery"
+msgstr ""
+
+#: keyword-statistics.php:1051 keyword-statistics.php:1085
+#: keyword-statistics.php:1095 keyword-statistics.php:1103
+#: keyword-statistics.php:1180 keyword-statistics.php:1191
+#: keyword-statistics.php:1200 keyword-statistics.php:1227
+#: keyword-statistics.php:1270 keyword-statistics.php:1753
+msgid "Metadata Generation"
+msgstr ""
+
+#: keyword-statistics.php:1053 keyword-statistics.php:1261
+msgid "Robots Default"
+msgstr ""
+
+#: keyword-statistics.php:1055 keyword-statistics.php:1748
+msgid "Keyword Density Checker"
+msgstr ""
+
+#: keyword-statistics.php:1057 keyword-statistics.php:1481
+msgid "Authors"
+msgstr ""
+
+#: keyword-statistics.php:1064
+msgid "titles"
+msgstr ""
+
+#: keyword-statistics.php:1065 keyword-statistics.php:1407
+#: keyword-statistics.php:1663
+msgid "keywords"
+msgstr ""
+
+#: keyword-statistics.php:1066
+msgid "descriptions"
+msgstr ""
+
+#: keyword-statistics.php:1071
+msgid "Error while saving sitewide meta informations!"
+msgstr ""
+
+#: keyword-statistics.php:1084
+msgid "Too many characters used at the title-tag! See configuration at"
+msgstr ""
+
+#: keyword-statistics.php:1086
+msgid ""
+"There you can define the maximum number of characters allowed for the title-"
+"tag."
+msgstr ""
+
+#: keyword-statistics.php:1094
+msgid ""
+"Too many characters and/or keywords/phrases used at the keywords tag! At"
+msgstr ""
+
+#: keyword-statistics.php:1096
+msgid "you can change the configuration options."
+msgstr ""
+
+#: keyword-statistics.php:1102
+msgid "The description you entered is too long. Have a look at"
+msgstr ""
+
+#: keyword-statistics.php:1104
+msgid ""
+"if you want to change the maximum number of characters for the description "
+"fields."
+msgstr ""
+
+#: keyword-statistics.php:1117 keyword-statistics.php:1217
+#: keyword-statistics.php:1476 keyword-statistics.php:1555
+#: keyword-statistics.php:1639 keyword-statistics.php:1743
+#: keyword-statistics.php:1868
+msgid "Options saved."
+msgstr ""
+
+#: keyword-statistics.php:1119 keyword-statistics.php:1219
+#: keyword-statistics.php:1478 keyword-statistics.php:1557
+#: keyword-statistics.php:1641 keyword-statistics.php:1745
+#: keyword-statistics.php:1870
+msgid "Options not saved"
+msgstr ""
+
+#: keyword-statistics.php:1127
+msgid ""
+"At this point you can set any string that will be placed before or after the "
+"tags data of any page your blog is serving. You can use the variables <b>%"
+"blogname%</b> and <b>%siteurl%</b> only in the fields below. Other variables "
+"can not be replaced at any page of your website. Don't let these strings get "
+"too long because it may will make your titles, keywords or descriptions too "
+"long. Remember that they will be added to the particular strings &ndash; "
+"title, keywords and description &ndash; defined in pages, posts or the "
+"content aggregations meta information. You can get a preview at"
+msgstr ""
+
+#: keyword-statistics.php:1127
+msgid "configuation."
+msgstr ""
+
+#: keyword-statistics.php:1128
+msgid "Sitewide predecessors / successors"
+msgstr ""
+
+#: keyword-statistics.php:1131
+msgid "Add in front of all"
+msgstr ""
+
+#: keyword-statistics.php:1137
+msgid "Append after all"
+msgstr ""
+
+#: keyword-statistics.php:1152
+msgid "home"
+msgstr ""
+
+#: keyword-statistics.php:1153
+msgid "categories"
+msgstr ""
+
+#: keyword-statistics.php:1154
+msgid "tags"
+msgstr ""
+
+#: keyword-statistics.php:1155
+msgid "archives"
+msgstr ""
+
+#: keyword-statistics.php:1156
+msgid "authors"
+msgstr ""
+
+#: keyword-statistics.php:1157
+msgid "search results"
+msgstr ""
+
+#: keyword-statistics.php:1162
+msgid "Error while attempting to save aggregations meta information!"
+msgstr ""
+
+#: keyword-statistics.php:1178 keyword-statistics.php:1189
+#: keyword-statistics.php:1198
+msgid "At section"
+msgstr ""
+
+#: keyword-statistics.php:1178 keyword-statistics.php:1189
+#: keyword-statistics.php:1198 keyword-statistics.php:1229
+msgid "Metadata for"
+msgstr ""
+
+#: keyword-statistics.php:1178
+msgid "The title is containing too many characters!"
+msgstr ""
+
+#: keyword-statistics.php:1179 keyword-statistics.php:1199
+msgid "The options for setting the maximum length of this field you'll find at"
+msgstr ""
+
+#: keyword-statistics.php:1189
+msgid ""
+"Keywords field is containing too many characters or too many keywords/"
+"phrases are included!"
+msgstr ""
+
+#: keyword-statistics.php:1190
+msgid "You can change these settings at"
+msgstr ""
+
+#: keyword-statistics.php:1198
+msgid "The description is containing too many characters!"
+msgstr ""
+
+#: keyword-statistics.php:1227
+msgid ""
+"Here you can set the titles and meta informations for the different content "
+"aggregations. If you leave blank the fields for title or description, these "
+"tags will be filled with the informations generated automatically from the "
+"listed posts. The keywords you set here will be filled up automatically with "
+"the ones from the listed posts - up to the maximum number of keywords "
+"defined at"
+msgstr ""
+
+#: keyword-statistics.php:1227
+msgid ""
+"You can use the variables listed in the table below. Each of the textfields "
+"comes with a preview. There you can see the values of the different tags "
+"with the predecessors and successors defined at"
+msgstr ""
+
+#: keyword-statistics.php:1254 keyword-statistics.php:1257
+msgid "default"
+msgstr ""
+
+#: keyword-statistics.php:1255
+msgid "index"
+msgstr ""
+
+#: keyword-statistics.php:1256
+msgid "noindex"
+msgstr ""
+
+#: keyword-statistics.php:1258
+msgid "follow"
+msgstr ""
+
+#: keyword-statistics.php:1259
+msgid "nofollow"
+msgstr ""
+
+#: keyword-statistics.php:1261
+msgid "If you set this to default, the settings at"
+msgstr ""
+
+#: keyword-statistics.php:1261
+msgid "will be used for this kind of content aggregation."
+msgstr ""
+
+#: keyword-statistics.php:1266
+msgid "Only for the first page"
+msgstr ""
+
+#: keyword-statistics.php:1270
+msgid ""
+"If this is activated, the options above will only be served at the first "
+"page of the particular aggregation. The other pages of the aggregation are "
+"handled automatically (see settings at"
+msgstr ""
+
+#: keyword-statistics.php:1279
+msgid "Variables you can use and their values:"
+msgstr ""
+
+#: keyword-statistics.php:1290
+msgid "Variable"
+msgstr ""
+
+#: keyword-statistics.php:1291
+msgid "Value (example)"
+msgstr ""
+
+#: keyword-statistics.php:1299
+msgid ""
+"The blogs title as defined at the standard configuration. You can use this "
+"variable in <b>any</b> of the fields."
+msgstr ""
+
+#: keyword-statistics.php:1304
+msgid "URL of your blog. Also usable at <b>any</b> of the fields above."
+msgstr ""
+
+#: keyword-statistics.php:1308
+msgid "No categories assigned!"
+msgstr ""
+
+#: keyword-statistics.php:1309
+msgid ""
+"Name of the currently listed category. Only replaced in <b>category</b> meta "
+"fields."
+msgstr ""
+
+#: keyword-statistics.php:1313
+msgid "No tags assigned!"
+msgstr ""
+
+#: keyword-statistics.php:1314
+msgid "Same as with category name but only on <b>tag</b> views."
+msgstr ""
+
+#: keyword-statistics.php:1319
+msgid ""
+"Authors name when opening author aggregations. Only availiable at <b>author</"
+"b> meta definitions."
+msgstr ""
+
+#: keyword-statistics.php:1324
+msgid ""
+"This variable is only availiable at <b>archive</b> meta definitions and will "
+"be replaced only on archive-views of your blog."
+msgstr ""
+
+#: keyword-statistics.php:1328
+msgid "how to use variables"
+msgstr ""
+
+#: keyword-statistics.php:1329
+msgid ""
+"Will be replaced with the search query on search result pages. Should only "
+"be used on meta configuration for <b>search results</b>."
+msgstr ""
+
+#: keyword-statistics.php:1334
+msgid ""
+"Pagination containing the page actually displayed. On the first page of an "
+"aggregation this will be deleted. You can use it in <b>any</b> field above."
+msgstr ""
+
+#: keyword-statistics.php:1439
+msgid "Error while saving plugin configuration for authors!"
+msgstr ""
+
+#: keyword-statistics.php:1486
+msgid ""
+"At this point you can allow or disallow authors (and distributors) to change "
+"fields defining the meta information for a particular page or post. Moreover "
+"you can determine if fields they can't change should be displayed for "
+"authors."
+msgstr ""
+
+#: keyword-statistics.php:1488
+msgid "Authors can"
+msgstr ""
+
+#: keyword-statistics.php:1490
+msgid "change the content language"
+msgstr ""
+
+#: keyword-statistics.php:1491
+msgid "switch status of the stopwords-filter"
+msgstr ""
+
+#: keyword-statistics.php:1492
+msgid "set individual title-tag"
+msgstr ""
+
+#: keyword-statistics.php:1493
+msgid "edit keywords"
+msgstr ""
+
+#: keyword-statistics.php:1494
+msgid "edit description"
+msgstr ""
+
+#: keyword-statistics.php:1495
+msgid "control robots"
+msgstr ""
+
+#: keyword-statistics.php:1499
+msgid "Hide fields authors can't change"
+msgstr ""
+
+#: keyword-statistics.php:1502
+msgid ""
+"Fields authors can't change may confuse them and is wasting space on screen. "
+"Activate this option to hide these fields."
+msgstr ""
+
+#: keyword-statistics.php:1506
+msgid "Hide fields authors can't change from admin"
+msgstr ""
+
+#: keyword-statistics.php:1509
+msgid ""
+"Hide the fields for admins too. This will save space in page-/post-edit if "
+"the statistics tool is used for checking the keyword densities only."
+msgstr ""
+
+#: keyword-statistics.php:1524
+msgid "Error while saving configuration for controlling robot!"
+msgstr ""
+
+#: keyword-statistics.php:1560
+msgid "Robots Default Settings"
+msgstr ""
+
+#: keyword-statistics.php:1565
+msgid ""
+"Here you can configure the default settings - index and follow - for the "
+"robots meta tag on content aggregations. These will be served for all "
+"aggregations that are not set to \"default\" at"
+msgstr ""
+
+#: keyword-statistics.php:1565
+msgid ""
+"configuation. You also can configure the settings for ODP, Yahoo! Directory "
+"and archiving (caching of your pages at search engines and archive.org) - "
+"ydir, odp and archive. These will be served with any page of your blog."
+msgstr ""
+
+#: keyword-statistics.php:1566
+msgid "Settings for Content Aggregations"
+msgstr ""
+
+#: keyword-statistics.php:1570
+msgid "allow robots to index aggregated content"
+msgstr ""
+
+#: keyword-statistics.php:1571
+msgid "allow robots to follow links in aggregated pages"
+msgstr ""
+
+#: keyword-statistics.php:1572
+msgid ""
+"This options can be used to manipulate the robots meta tag in all kinds of "
+"content-aggregations (category-, tag-, archive-, author- and post-lists)."
+msgstr ""
+
+#: keyword-statistics.php:1575
+msgid "Sitewide settings for ODP, Yahoo! Directory and archiving"
+msgstr ""
+
+#: keyword-statistics.php:1579
+msgid "don't use information from ODP"
+msgstr ""
+
+#: keyword-statistics.php:1580
+msgid "don't use information from Yahoo! Directory"
+msgstr ""
+
+#: keyword-statistics.php:1581
+msgid "prevent archiving on archive.org and search engines"
+msgstr ""
+
+#: keyword-statistics.php:1582
+msgid ""
+"These settings have infuence on sitewide robots meta data (if checked noodp, "
+"noydir or noarchive will be used)."
+msgstr ""
+
+#: keyword-statistics.php:1585
+msgid "Feeds"
+msgstr ""
+
+#: keyword-statistics.php:1589
+msgid "disallow robots to index the blog's feeds"
+msgstr ""
+
+#: keyword-statistics.php:1590
+msgid ""
+"This option can be used for controlling the indexation of the blog's feeds. "
+"If checked the posts and comments feeds will be set to noindex at the header "
+"of all feed files delivered by the bog."
+msgstr ""
+
+#: keyword-statistics.php:1605
+msgid "Error while saving options for serving meta informations!"
+msgstr ""
+
+#: keyword-statistics.php:1649
+msgid ""
+"The settings below are used to configure which meta informations (tag) "
+"should be served by your blog. You can individually switch off or on "
+"particular tags or disallow the plugin to serve any meta information - e.g. "
+"if you use other plugins for serving meta informations instead and don't "
+"want to generate multiple tags of one type."
+msgstr ""
+
+#: keyword-statistics.php:1650
+msgid "Meta tag configuration"
+msgstr ""
+
+#: keyword-statistics.php:1652
+msgid "Serve title tag"
+msgstr ""
+
+#: keyword-statistics.php:1655
+msgid ""
+"If you don't want to let the plugin serve the page title-tag, you can "
+"deactivate this option. In this case the title generated by WordPress or "
+"another plugin will stay in the HTML code of each page."
+msgstr ""
+
+#: keyword-statistics.php:1659
+msgid "Serve meta informations for"
+msgstr ""
+
+#: keyword-statistics.php:1661
+msgid "robots"
+msgstr ""
+
+#: keyword-statistics.php:1662
+msgid ""
+"If you want to use a robots.txt file to control robots you can uncheck this "
+"option. After that no robots meta will be embedded into the pages of your "
+"blog."
+msgstr ""
+
+#: keyword-statistics.php:1664
+msgid ""
+"Switch this off if you don't want your blog to serve the keywords generated "
+"automatic by the plugins keyword statistics or your custom set of keywords "
+"set on each post or page. The keywords will also not be added to the HTML "
+"meta section on all kinds of content aggregations."
+msgstr ""
+
+#: keyword-statistics.php:1665
+msgid "description"
+msgstr ""
+
+#: keyword-statistics.php:1666
+msgid "Same as with the keywords option described before."
+msgstr ""
+
+#: keyword-statistics.php:1667
+msgid "canonical"
+msgstr ""
+
+#: keyword-statistics.php:1668
+msgid ""
+"Don' let the plugin serve the canonical urls at any page served by the blog "
+"- including the various content aggregations - if this is off. In this case "
+"the canonical generation of WordPress 2.9+ will be reactivated. In older "
+"WordPress versions no canonical will be generated if you are not running "
+"another plugin doing this."
+msgstr ""
+
+#: keyword-statistics.php:1672
+msgid "Don't serve any meta information"
+msgstr ""
+
+#: keyword-statistics.php:1675
+msgid ""
+"This option overwrites the ones above so if you activate it no metadata will "
+"be served. If you are using other plugins for adding meta informations you "
+"can check this option. This way no metadata will be inserted at any page of "
+"your blog. The plugin can still be used to check keyword densities."
+msgstr ""
+
+#: keyword-statistics.php:1679
+msgid "Activate testmode"
+msgstr ""
+
+#: keyword-statistics.php:1682
+msgid ""
+"If activated the meta informations are served within a HTML comment. Search "
+"engines ignore these informations but while testing the plugins output you "
+"can see what will be served if you are not in testmode. This way you can "
+"compare the plugins metadata with the ones integrated by other plugins doing "
+"the same or similar work."
+msgstr ""
+
+#: keyword-statistics.php:1697
+msgid "Error while saving options for the keyword density checker!"
+msgstr ""
+
+#: keyword-statistics.php:1753
+msgid ""
+"With these options you can configure the keyword density checker. You can "
+"set a stopwords filter and in which iterval the statistics will be "
+"generated. These settings are affecting the statistics shown at edit page/"
+"post only. The settings for the automatic generation of meta informations "
+"can be found at "
+msgstr ""
+
+#: keyword-statistics.php:1755
+msgid "Default language"
+msgstr ""
+
+#: keyword-statistics.php:1772
+msgid "Default language for filtering stopwords"
+msgstr ""
+
+#: keyword-statistics.php:1776
+msgid "Integrate content language in meta informations"
+msgstr ""
+
+#: keyword-statistics.php:1779
+msgid ""
+"If your blog contains content in languages not listed in the selection above "
+"or you are planning to write posts or pages in not supported languages, you "
+"should deactivate this option. This will prevent from sending the false "
+"content language and let the client check it automatically."
+msgstr ""
+
+#: keyword-statistics.php:1786
+msgid ""
+"Activate the stopword-filter by default when post/page-editor will be opened"
+msgstr ""
+
+#: keyword-statistics.php:1790
+msgid "Items in keyword lists"
+msgstr ""
+
+#: keyword-statistics.php:1795
+msgid "Display this number of the most common keywords / key-phrases"
+msgstr ""
+
+#: keyword-statistics.php:1799
+msgid "Automatic Update"
+msgstr ""
+
+#: keyword-statistics.php:1802
+msgid ""
+"Should the statistics refresh automatically? Turn off this option, if you "
+"have got slow JavaScript-Performance and use the button in the various edit-"
+"views instead!"
+msgstr ""
+
+#: keyword-statistics.php:1803
+msgid "every"
+msgstr ""
+
+#: keyword-statistics.php:1805
+msgid "seconds"
+msgstr ""
+
+#: keyword-statistics.php:1806
+msgid "Number of seconds between the updates"
+msgstr ""
+
+#: keyword-statistics.php:1810
+msgid "Minimum number of words per post or page"
+msgstr ""
+
+#: keyword-statistics.php:1815
+msgid ""
+"If there is no content it doesn't make sense to generate meta informations "
+"from it. Here you can set the minimum number of words in a post or page that "
+"should be reached before keywords and description meta will be generated."
+msgstr ""
+
+#: keyword-statistics.php:1819
+msgid "Keyword Phrases"
+msgstr ""
+
+#: keyword-statistics.php:1821
+msgid "show 2-word phrases"
+msgstr ""
+
+#: keyword-statistics.php:1822
+msgid "show 3-word phrases"
+msgstr ""
+
+#: keyword-statistics.php:1823
+msgid ""
+"Switching on or off statistics for 2- and 3-word phrases (if your browser's "
+"JavaScript-Engine ist too slow and it is disturbing while writing)"
+msgstr ""
+
+#: keyword-statistics.php:1838
+msgid "Error while saving options for automatic meta data generation!"
+msgstr ""
+
+#: keyword-statistics.php:1873
+msgid "Automatic Metadata Generation"
+msgstr ""
+
+#: keyword-statistics.php:1878
+msgid ""
+"Here you can configure if the keyword statistics plugin should automatically "
+"set meta keywords and description of single posts or pages at edit-page/"
+"post. Moreover you can set some boundaries for the characters or keys used "
+"in the keywords and description meta tags. These values are used when the "
+"plugin is generating aggregated values for the tags. At edit-page/post these "
+"values are used to warn the author when he is using too many characters or "
+"words."
+msgstr ""
+
+#: keyword-statistics.php:1880
+msgid "Update meta data automatically"
+msgstr ""
+
+#: keyword-statistics.php:1883
+msgid ""
+"Uncheck this option, if you want to edit the fields with the meta "
+"informations manually. If one of the fields is editable and has been edited, "
+"the automatic actualization will be disabled."
+msgstr ""
+
+#: keyword-statistics.php:1887
+msgid "Words for aggregated descriptions"
+msgstr ""
+
+#: keyword-statistics.php:1892
+msgid ""
+"Set this to 0 if no automatic integration of a meta description is wanted in "
+"aggregation-views."
+msgstr ""
+
+#: keyword-statistics.php:1896
+msgid "Maximum number of characters in title tags"
+msgstr ""
+
+#: keyword-statistics.php:1904
+msgid "Maximum number of keywords/phrases in keyword tags"
+msgstr ""
+
+#: keyword-statistics.php:1912
+msgid "Number of meta keywords generated in posts or pages"
+msgstr ""
+
+#: keyword-statistics.php:1917
+msgid ""
+"For generating a list of suggested keywords for setting the meta-keyword-tag "
+"of a single post or page."
+msgstr ""
+
+#: keyword-statistics.php:1921
+msgid "Maximum number of characters in keyword tags"
+msgstr ""
+
+#: keyword-statistics.php:1929
+msgid "Minimum number of characters in meta description"
+msgstr ""
+
+#: keyword-statistics.php:1937
+msgid "Maximum number of characters in meta description"
+msgstr ""
+
+#: keyword-statistics.php:2003
+msgid "Text Statistics"
+msgstr ""
+
+#: keyword-statistics.php:2005
+msgid "Total Words with / without Stopwords"
+msgstr ""
+
+#: keyword-statistics.php:2005
+msgid "Total Words"
+msgstr ""
+
+#: keyword-statistics.php:2005
+msgid "Different Words with / without Stopwords"
+msgstr ""
+
+#: keyword-statistics.php:2005
+msgid "Different Words"
+msgstr ""
+
+#: keyword-statistics.php:2005
+msgid "Stopwords"
+msgstr ""
+
+#: keyword-statistics.php:2011
+msgid "Meta Keywords Suggestion"
+msgstr ""
+
+#: keyword-statistics.php:2046
+msgid "Single Words"
+msgstr ""
+
+#: keyword-statistics.php:2046
+msgid "2 Word Phrases"
+msgstr ""
+
+#: keyword-statistics.php:2046
+msgid "3 Word Phrases"
+msgstr ""
+
+#: keyword-statistics.php:2047
+msgid "Count"
+msgstr ""
+
+#: keyword-statistics.php:2047
+msgid "Density"
+msgstr ""
+
+#: keyword-statistics.php:2047
+msgid "Keyword / Phrase"
+msgstr ""
+
+#: keyword-statistics.php:2048
+msgid "Total / Different"
+msgstr ""
+
+#: keyword-statistics.php:2058
+msgid "No single keywords found"
+msgstr ""
+
+#: keyword-statistics.php:2058
+msgid "No 2-word phrases found"
+msgstr ""
+
+#: keyword-statistics.php:2058
+msgid "No 3-word phrases found"
+msgstr ""

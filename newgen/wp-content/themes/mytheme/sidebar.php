@@ -1,0 +1,117 @@
+<?php
+/**
+ * The Sidebar containing the primary and secondary widget areas.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Ten
+ * @since Twenty Ten 1.0
+ */
+?>
+  
+	   <div class="rightcol">
+ <?php /* Menu for subpages of current page (copied from K2 theme) */
+//echo "bgkjsd fgdgg";
+	global $notfound;
+
+    if (is_page() and ($notfound != '1')) {
+
+        $current_page = $post->ID;
+
+        while($current_page) {
+
+            $page_query = $wpdb->get_row("SELECT ID, post_title, post_status, post_parent FROM $wpdb->posts WHERE ID = '$current_page'");
+
+            $current_page = $page_query->post_parent;
+
+        }
+
+        $parent_id = $page_query->ID;
+
+        $parent_title = $page_query->post_title;
+
+
+
+        // if ($wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_parent = '$parent_id' AND post_status != 'attachment'")) {
+
+        if ($wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_parent = '$parent_id' AND post_type != 'attachment'")) {
+
+    ?>
+ 
+	   
+	    <aside id="right_featured" class="body"><article>
+	      <hgroup>
+
+		  <ul>
+
+  
+		   <li><h3><?php echo $parent_title; ?> </h3>
+		    </li>
+			
+		<?php wp_list_pages('sort_column=menu_order&title_li=&child_of='. $parent_id); ?>
+			</ul>
+	    </hgroup>
+
+         </article>
+	    </aside>
+		
+		 <?php }}?>
+<aside id="right_featured" class="body"><article>
+	      <hgroup>
+		<div id="primary" class="widget-area" role="complementary" style="width:234px;">
+				<ul class="xoxo">
+
+<?php
+	/* When we call the dynamic_sidebar() function, it'll spit out
+	 * the widgets for that widget area. If it instead returns false,
+	 * then the sidebar simply doesn't exist, so we'll hard-code in
+	 * some default sidebar stuff just in case.
+	 */
+	if ( ! dynamic_sidebar( 'primary-widget-area' ) ) : ?>
+
+			
+    <?php /*?>
+			<li id="search" class="widget-container widget_search">
+				<?php //get_search_form(); ?>
+			</li>
+
+			<li id="archives" class="widget-container">
+				<h3 class="widget-title"><?php _e( 'Archives', 'twentyten' ); ?></h3>
+				<ul>
+					<?php //wp_get_archives( 'type=monthly' ); ?>
+				</ul>
+			</li>
+
+			<li id="meta" class="widget-container">
+				<h3 class="widget-title"><?php _e( 'Meta', 'twentyten' ); ?></h3>
+				<ul>
+					<?php //wp_register(); ?>
+					<li><?php //wp_loginout(); ?></li>
+					<?php //wp_meta(); ?>
+				</ul>
+			</li><?php */?>
+
+		<?php endif; // end primary widget area ?>
+			</ul>
+		</div><!-- #primary .widget-area -->
+</hgroup>
+
+      </article>
+	    </aside>   
+<?php
+	// A second sidebar for widgets, just because.
+	if ( is_active_sidebar( 'secondary-widget-area' ) ) : ?>
+
+		 <aside id="right_featured" class="body"><article>
+	      <hgroup>
+		<div id="secondary" class="widget-area" role="complementary">
+			<ul class="xoxo">
+				<?php dynamic_sidebar( 'secondary-widget-area' ); ?>
+			</ul>
+		</div><!-- #secondary .widget-area -->
+</hgroup>
+
+      </article>
+	    </aside>
+<?php endif; ?>
+  </div>
+	  

@@ -1,0 +1,25 @@
+<table width="750" border="0" align="center" cellpadding="0" cellspacing="0">
+<br />
+  <tr> 
+    <td><table border="1" align="center" bordercolor="#97866e">
+        <tr> 
+          <td><a href="img/{parID}.jpg"><img src="img/{hashID}.jpg" alt="{name}" /></a></td>
+        </tr>
+      </table>
+      <div align="center">
+		  {name}<br />
+          {dimensions}<br />
+          {optional}<br />
+		  <!-- IF sold -->
+          <i>Sold</i><br />
+		  <!-- ENDIF -->
+          <font size="-1"><a href="img/{parID}.jpg">High Quality</a></font><br />
+		  <!-- IF SESS.logged -->
+			<br/>
+			<br/>
+			<i><a href="?d=admin&amp;hash={parID}&amp;action=delete">Delete</a></i>
+		  <!-- ENDIF -->
+      </div>
+    </td>
+  </tr>
+</table>

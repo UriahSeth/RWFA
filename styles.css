@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body
+{
+background-image:url('../images/background.gif');
+color:#cccccc;
+}
+
+a:link {color:#B19873; text-decoration:none;}          /* unvisited link */
+a:visited {color:#B19873; text-decoration:none;}       /* visited link */
+a:hover {color:#B19873; text-decoration:underline;}    /* mouse over link */
+a:active {color:#FFFFFF; text-decoration:underline;}   /* selected link */
+
+#head01 {
+	width: 193px;
+	height: 69px;
+	margin: 0;
+	padding: 0;
+	background:url(images/Heading_01.png) no-repeat;
+	text-indent: -9999px;
+	}

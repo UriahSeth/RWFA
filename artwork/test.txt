@@ -1,0 +1,31 @@
+UPDATE common SET sold=!sold WHERE parent='f49c4c6e14c783274b92ea917a20ef73'
+Fail: 
+UPDATE common SET sold=!sold WHERE parent='62638332646a52cc3d54332ad8d9fc34'
+Fail: 
+UPDATE common SET sold = NOT sold WHERE parent='f49c4c6e14c783274b92ea917a20ef73'
+Win!UPDATE common SET sold = NOT sold WHERE parent='f49c4c6e14c783274b92ea917a20ef73'
+Win!UPDATE common SET sold = NOT sold WHERE parent='00bd2287ead57ea09c9c08e75bf24416'
+Win!UPDATE common SET sold = NOT sold WHERE parent='f49c4c6e14c783274b92ea917a20ef73'
+Win!UPDATE common SET sold = NOT sold WHERE parent='f49c4c6e14c783274b92ea917a20ef73'
+Win!UPDATE common SET (sold = NOT sold) WHERE parent='8414245ecee53ab6844db1fbd2a6d8cd'
+Fail: 
+UPDATE common SET sold = NOT sold WHERE parent='8414245ecee53ab6844db1fbd2a6d8cd'
+Win!
+UPDATE common SET sold = NOT sold WHERE parent='8414245ecee53ab6844db1fbd2a6d8cd'
+Win!
+UPDATE common SET sold = NOT sold WHERE parent='8414245ecee53ab6844db1fbd2a6d8cd'
+Win!
+UPDATE common SET sold = NOT sold WHERE parent='93cfb7d8dec15106c466a5b455dee77a'
+Win!
+UPDATE common SET sold = NOT sold WHERE parent='9865d6117d73e0a6045c45b1556392a9'
+Win!
+UPDATE common SET sold = NOT sold WHERE parent='9865d6117d73e0a6045c45b1556392a9'
+Win!
+UPDATE common SET sold = NOT sold WHERE parent='693bd78177eb075814afd904d84f0555'
+Win!
+UPDATE common SET sold = NOT sold WHERE parent='693bd78177eb075814afd904d84f0555'
+Win!
+UPDATE common SET sold = NOT sold WHERE parent='693bd78177eb075814afd904d84f0555'
+Win!
+UPDATE common SET sold = NOT sold WHERE parent='9865d6117d73e0a6045c45b1556392a9'
+Win!

@@ -1,0 +1,24 @@
+<form action="{self}" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="d" value="admin"/>
+	<!-- IF !file -->
+		File to Upload: <input type="file" name="datafile" size="40" />
+		<input type="hidden" name="action" value="upit"/>
+	<!-- ELSE -->
+		<div id="uploaded_img">
+			<img class="medium" src="img/{hash2}.jpg" alt="Uploaded" />
+		</div>
+		Uploaded: <input type="text" name="date" size="40" value="{date}"/><br/>
+		Title: <input type="text" name="filename" size="40" value="{filename}"/><br/>
+		Dimensions: <input type="text" name="dimensions" size="40" value="{dimensions}"/><br/>
+		Optional Qualifying Information: <input type="text" name="optional" size="40" value="{optional}"/><br/>
+		Sold: <input type="checkbox" name="sold" value="{sold}"/><br/>
+		<input type="hidden" name="hash1" value="{hash1}"/>
+		<input type="hidden" name="hash2" value="{hash2}"/>
+		<input type="hidden" name="hash3" value="{hash3}"/>
+		<input type="hidden" name="date" value="{date}"/>
+		<input type="hidden" name="action" value="{action}"/>
+		<input type="submit" name="cancel" value="Cancel">
+	<!-- ENDIF -->
+	<br/>
+	<input type="submit" value="Submit">
+</form>

@@ -1,0 +1,80 @@
+<!-- IF pages -->
+
+<div class="pages">
+  <!-- DO pages -->
+  <!-- IF selected -->
+  {pagename}
+  <!-- ELSE -->
+  <a href="?d={d}&amp;page={page}">{pagename}</a>
+  <!-- ENDIF -->
+  <!-- LOOP -->
+</div>
+<!-- ENDIF -->
+<font color="#CCCCCC" size="+1"> <em>Click on the image to view a larger representation.</em></font>
+<div id="imagediv">
+  <table width="790" border="0" cellspacing="25" cellpadding="0" align="center">
+    <!-- DO imagerows -->
+    <tr>
+      <!-- DO image -->
+		  <!-- ODD -->
+			  <!-- IF parID -->
+				  <td width="200"><div align="center"> <a href="?d=image&amp;hash={parID}" title="'{name}' : {date}"><img class="thumb" src="img/{hashID}.jpg" alt="{name}" /></a></div></td>
+
+				  <td width="150">
+					<div align="left">
+					  <p> &quot;{name}&quot; <br>
+						{dimensions}</p>
+						<!-- IF SESS.logged -->
+							<!-- IF !top -->
+								<a href="?d=order&amp;hash={parID}&amp;dir=up">up</a> /
+							<!-- ELSE -->
+								up / 
+							<!-- ENDIF -->
+							<!-- IF !bottom -->
+								<a href="?d=order&amp;hash={parID}&amp;dir=down">down</a>
+							<!-- ELSE -->
+								down
+							<!-- ENDIF -->
+						<!-- ENDIF -->
+					</div>
+				  </td>
+			  <!-- ENDIF -->
+		  <!-- ELSE -->
+			  <!-- IF parID -->
+				  <td width="150">
+					<div align="right">
+					  <p> &quot;{name}&quot; <br>
+						{dimensions}</p>
+						<!-- IF SESS.logged -->
+							<!-- IF !top -->
+								<a href="?d=order&amp;hash={parID}&amp;dir=up">up</a> /
+							<!-- ELSE -->
+								up / 
+							<!-- ENDIF -->
+							<!-- IF !bottom -->
+								<a href="?d=order&amp;hash={parID}&amp;dir=down">down</a>
+							<!-- ELSE -->
+								down
+							<!-- ENDIF -->
+						<!-- ENDIF -->
+					</div>
+				  </td>
+				  <td width="200"><div align="center"> <a href="?d=image&amp;hash={parID}" title="'{name}' : {date}"><img class="thumb" src="img/{hashID}.jpg" alt="{name}" /></a></div></td>
+			  <!-- ENDIF -->
+		  <!-- ENDIF -->
+      <!-- LOOP -->
+    </tr>
+    <!-- LOOP -->
+  </table>
+</div>
+<!-- IF pages -->
+<div class="pages">
+  <!-- DO pages -->
+  <!-- IF selected -->
+  {pagename}
+  <!-- ELSE -->
+  <a href="?d={d}&amp;page={page}">{pagename}</a>
+  <!-- ENDIF -->
+  <!-- LOOP -->
+</div>
+<!-- ENDIF -->

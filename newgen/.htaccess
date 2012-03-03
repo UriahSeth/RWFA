@@ -1,0 +1,14 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /newgen/
+RewriteRule ^meet/events/([0-9]+)[\/]{0,1}$ index.php?event_id=$1
+RewriteRule ^artwork/past-work/([0-9]+)[\/]{0,1}$ index.php?page=$1
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /newgen/index.php [L]
+</IfModule>
+
+# END WordPress

@@ -1,0 +1,35 @@
+<div>
+<pre>
+<?php
+var_dump($_REQUEST);
+/*var_dump($_FILES);
+if(isset($_FILES['datafile']) && $_FILES['datafile']['error'] == 0) {
+	var_dump(exif_read_data($_FILES['datafile']['tmp_name']));
+	var_dump(@exif_read_data($_FILES['datafile']['tmp_name']));
+	var_dump(@exif_read_data("img/f4de77b1fefd34b319007677c8de880e.jpg"));
+}*/
+$exif['FNumber'] = isset($_REQUEST['textline1'])?$_REQUEST['textline1']:'1/1';
+print(substr($exif['FNumber'], 0, strpos($exif['FNumber'], '/'))/substr($exif['FNumber'], strpos($exif['FNumber'], '/')+1, strlen($exif['FNumber'])-strpos($exif['FNumber'], '/')) . "\n");
+print(substr($exif['FNumber'], 0, strpos($exif['FNumber'], '/')) . "\n");
+print(substr($exif['FNumber'], strpos($exif['FNumber'], '/')+1, strlen($exif['FNumber'])-strpos($exif['FNumber'], '/')) . "\n");
+
+?>
+</pre>
+</div>
+<?php
+$t->set(array('main' =>
+'
+<form action="' . $t->self() . '?d=test" method="post" enctype="multipart/form-data">
+<p>
+Type some text (if you like):<br>
+<input type="text" name="textline1" size="30"><br/>
+<input type="text" name="textline[]" size="30"><br/>
+<input type="text" name="textline[]" size="30"><br/>
+File to Upload: <input type="file" name="datafile" size="40" />
+</p>
+<div>
+<input type="submit" value="Send">
+</div>
+</form>
+'));
+?>

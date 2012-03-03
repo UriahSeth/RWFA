@@ -1,0 +1,141 @@
+* {
+	/* Reset browsers default margin, padding and font sizes */
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	/* Text-Sizing with ems: http://www.clagnut.com/blog/348/ */
+	font-family: sans-serif;
+	color: #ffffff;
+	width: 1024px;
+	height: 100%;
+	margin: auto;
+	background-image: url(../119721887685.png);
+	/*background-repeat: repeat-x;
+	background-position: bottom center;
+	background-attachment: fixed;*/
+}
+
+div {
+	background-color: #657383;
+}
+
+a {
+	color: #ffffff;
+}
+
+div#topper {
+	border: 3px double #fff;
+	text-align: center;
+	margin-top: 5px;
+}
+
+div#main {
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid #fff;
+}
+
+div#bottommer {
+	border: 3px double #fff;
+	text-align: center;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+table {
+	display: table;
+}
+
+td, th {
+	display: table-cell;
+	margin: 5px;
+}
+
+tr {
+	display: table-row;
+}
+
+span#title {
+	font-variant: small-caps;
+	font-family: times, serif;
+	font-size: 500%;
+}
+
+span#copyright {
+	font-variant: small-caps;
+	font-family: times, serif;
+}
+
+center {
+	text-align: center;
+}
+
+i {
+	text-decoration: italic;
+}
+
+td.image {
+	width: 120px;
+	height: 120px;
+	padding: 5px;
+	/*border: 1px solid #fff;*/
+}
+
+div#imagediv {
+	text-align: center;
+	width: 100%;
+}
+
+table#images {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+img.thumb {
+	display: block;
+	vertical-align: middle;
+	margin: auto;
+}
+
+img.medium {
+	border: 3px solid #fff;
+}
+
+input {
+	background-color: #7F7F7F; 
+	color: white;
+}
+
+textarea {
+	background-color: #7F7F7F; 
+	color: white;
+}
+
+
+div.right {
+	width:99%;
+	text-align: right;
+	margin-bottom: 5px;
+}
+
+span.error {
+	color: red;
+	font-weight: bold;
+}
+
+div#uploaded_img {
+	text-align: center;
+	width: 100%;
+}
+
+span.namedate {
+	font-variant: small-caps;
+	font-family: times, serif;
+	font-size: 200%;
+}

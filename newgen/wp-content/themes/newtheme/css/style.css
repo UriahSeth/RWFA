@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*  Reset for some default browser CSS - General */
+
+body, div, h1, h2, h3, p, ul, ol, li, img, header, section, aside, footer, button {
+	margin: 0; padding: 0; border: 0; list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #961b25;
+}
+
+a:hover {
+	color: #6f92a7;
+}
+
+:focus {
+	outline: 0;
+}
+
+h1, h2, h3 {
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif; 
+	font-weight: normal;
+} 
+
+h2 {
+	font-size: 22px;
+	line-height: 28px;
+}
+
+.float {
+		float:left;
+	}
+	
+body {
+	background: #999999;
+	font-family : "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-size: 12px;
+	}	
+
+/* Main container */	
+#main_content {	
+	width: 850px;
+	margin: 0 auto;
+	
+	}
+	
+	div.leftcol {
+		float: left;
+		width: 410px;
+		height: 557px;
+		margin: 0 40px 2px 0px;
+		display:inline;
+		background-color:#00CC99;
+		position:static;
+	}
+	
+	div.rightcol {
+		float: left;
+		width:390px;
+		height: 345px;
+		display:inline;
+		
+	}
+	
+	div.rightcol_inner {
+	position:relative;
+	top:50%;
+	}
+	
+	nav.head_nav {
+	width:100%;
+		text-align:right;
+	}
+	
+	nav.head_nav ul li {
+		display: inline;
+		margin: 0px 5px;
+	}
+	
+	nav.head_nav ul li a {
+		color:#DDDDDD;
+		font-size: 20px;
+		font-weight: normal;
+		font-family:Helvetica;
+		padding: 5px 8px;
+	}
+	
+	nav.head_nav ul li a:hover{
+	color:#444444;
+	}
+	

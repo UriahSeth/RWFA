@@ -1,0 +1,14 @@
+<br/>
+<br/>
+<br/>
+<span class="error">Are you sure you want to delete the image: {name}?</span><br/>
+<br/>
+<img class="thumb" src="img/{hashID}.jpg" alt="{name}" />
+<br/>
+<br/>
+<form action="{self}" method="post">
+		<input type="hidden" name="action" value="confdel"/>
+		<input type="hidden" name="d" value="admin"/>
+		<input type="hidden" name="hash" value="{hash}"/>
+		<input type="submit" name="buttons" value="Confirm"> - <input type="submit" name="buttons" value="Cancel">
+</form>

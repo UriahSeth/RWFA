@@ -1,0 +1,9 @@
+<?php
+	if (!mysql_pconnect("localhost", "seth_db", "pDHcrZKY95fFBuXw")) {
+		die('Not connected : ' . mysql_error());
+	}
+	if(!mysql_select_db("seth_db")) {
+		die('Could not select DB : ' . mysql_error());
+	}
+?>
+
